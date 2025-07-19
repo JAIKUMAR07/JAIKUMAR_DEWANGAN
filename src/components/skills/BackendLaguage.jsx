@@ -1,14 +1,14 @@
 import React from "react";
 
 // data/programingLanguageList.js
-
+import expressimg from "../../../public/skills/backend/expressJS.png";
 const skillImageBase = "../../../public/skills/backend";
 
 const BackendLaguage = [
   {
     id: 1,
-    image: `${skillImageBase}/expressJS.png`,
-    title: "Express.JS",
+    image: expressimg,
+    title: "Express.JS hai",
     level: "Beginner",
   },
   {
