@@ -1,12 +1,133 @@
-# React + Vite
+🚀 Jaikumar Dewangan – Portfolio Website
+A modern, fully responsive personal portfolio built with React and Vite, designed to showcase my journey as a Full-Stack Developer — including my projects, achievements, professional experience, and certifications.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌐 Live Demo
+🔗 Visit Portfolio
+(Replace with your actual deployment link)
 
-Currently, two official plugins are available:
+📸 Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Homepage featuring animated introduction and social media integration
 
-## Expanding the ESLint configuration
+🛠️ Tech Stack
+Frontend: React 19.1.0
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Styling: TailwindCSS 4.1.11
+
+Routing: React Router DOM 7.3.0
+
+Build Tool: Vite 7.0.4
+
+Deployment: Vercel / Netlify
+
+Code Quality: ESLint 9.30.1
+
+✨ Features
+🎨 Modern UI/UX
+Responsive layout for mobile, tablet, and desktop
+
+Dark theme with glassmorphism and smooth animations
+
+Hover effects, gradient text, and custom shadows
+
+📄 Multi-Page Setup
+Home: Hero section with typewriter animation
+
+About: Personal background, experience, and education
+
+Projects: Filterable list with live demos and GitHub links
+
+Credentials: Certificate gallery and badge showcase
+
+🔧 Interactive Elements
+Animated typewriter introduction
+
+Hamburger menu for mobile navigation
+
+Project filtering by category (e.g., Full-Stack, ML)
+
+Smooth scrolling and section transitions
+
+💼 Professional Sections
+Skills: Frontend, backend, tools, and languages
+
+Experience Timeline: Leadership and internship roles
+
+Certifications: Verified industry credentials
+
+Education: Academic background
+
+🚀 Getting Started
+Prerequisites
+Node.js (v16 or later)
+
+npm or yarn
+
+Installation
+Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/JAIKUMAR07/portfolio-hackathon.git
+cd portfolio-hackathon
+Install dependencies:
+
+bash
+Copy
+Edit
+npm install
+
+# or
+
+yarn install
+Start the development server:
+
+bash
+Copy
+Edit
+npm run dev
+
+# or
+
+yarn dev
+Open in browser:
+http://localhost:5173
+
+Build for Production
+bash
+Copy
+Edit
+npm run build
+npm run preview
+📁 Project Structure
+css
+Copy
+Edit
+portfolio-hackathon/
+├── public/
+│ ├── skills/
+│ ├── projects_image/
+│ ├── certificates/
+│ └── social_icons/
+├── src/
+│ ├── components/
+│ │ ├── aboutPage/
+│ │ ├── credentialsPage/
+│ │ ├── homePage/
+│ │ ├── navbar/
+│ │ ├── projectsPage/
+│ │ ├── skills/
+│ │ ├── layout/
+│ │ └── footer/
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+├── vite.config.js
+└── README.md
+
+<div align="center">
+Made with ❤️ by Jaikumar Dewangan
+⭐ Star this repo if you find it helpful!
+
+</div>
