@@ -1,6 +1,6 @@
 // data/programingLanguageList.js
 
-const skillImageBase = "../../../public/skills/programing_language";
+const skillImageBase = "/skills/programing_language";
 
 const ProgramingLanguageList = [
   {
