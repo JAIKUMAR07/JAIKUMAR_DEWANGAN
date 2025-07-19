@@ -1,6 +1,6 @@
 // data/programingLanguageList.js
 
-const skillImageBase = "../../../public/skills/frontend";
+const skillImageBase = "/skills/frontend";
 
 const FrontedLanguage = [
   {
