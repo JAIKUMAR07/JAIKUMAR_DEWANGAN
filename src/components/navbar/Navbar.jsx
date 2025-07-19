@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="z-20 py-[5px] bg-[#ffffff12] fixed top-0 w-full backdrop-blur-md cursor-pointer">
+    <nav className="z-1  my bg-[#ffffff12] fixed top-0 w-full backdrop-blur-md cursor-pointer">
       <div className="max-md:px-10 px-28">
         <div className="flex h-[80px] items-center justify-between">
           <div className="hero-container">

@@ -3,7 +3,8 @@ import React from "react";
 const badgesData = [
   {
     id: 1,
-    name: "Persuasive Influence Path Completion",
+    name: "Toastmasters International",
+    description: "Persuasive Influence Path Completion",
     image:
       "https://toastmaster-prod-edx-storage.s3.amazonaws.com/badges/pathways-badge-persuasive-influence-proficient.svg",
     path: "https://basecamp.toastmasters.org/public/social/1eaabd80-ab90-4df3-af36-c67ee76d5357/",
@@ -11,10 +12,21 @@ const badgesData = [
   {
     id: 2,
     name: "HackerRank",
-    initials: "HK",
-    color: "bg-green-600",
-    description: "4-Star C Language",
+
+    image:
+      "https://tse2.mm.bing.net/th/id/OIP.04oGvilaqzyDwqlhHrF8bAHaHa?pid=Api&P=0&h=180",
+
+    description: "4-Star in C Language",
     path: "https://www.hackerrank.com/profile/jaikumar007",
+  },
+  {
+    id: 3,
+    name: "Toastmasters International",
+
+    description: "Level 5 Completion",
+    image:
+      "https://toastmaster-prod-edx-storage.s3.amazonaws.com/badges/pathways-badge-persuasive-influence-level-5.svg",
+    path: "https://basecamp.toastmasters.org/public/social/0c831874-032f-4f95-83cc-ecf9106ba3e1/",
   },
 ];
 
