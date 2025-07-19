@@ -1,6 +1,4 @@
-// data/programingLanguageList.js
-
-const skillImageBase = "/skills/frontend";
+const skillImageBase = "/skills/frontend"; // ✅ Note the leading slash
 
 const FrontedLanguage = [
   {
@@ -24,7 +22,7 @@ const FrontedLanguage = [
   {
     id: 4,
     image: `${skillImageBase}/tailwindCSS.png`,
-    title: "TailwindCSS ",
+    title: "TailwindCSS",
     level: "Intermediate",
   },
   {
