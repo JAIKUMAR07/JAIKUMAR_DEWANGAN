@@ -168,7 +168,7 @@ const AchievementsSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, type: "spring" }}
-          className="text-3xl md:text-4xl font-black text-center mb-8 md:mb-12 bg-gradient-to-rfrom-green-400 to-cyan-100 text-transparent bg-clip-text"
+          className="text-3xl md:text-4xl font-black text-center mb-8 md:mb-12 bg-gradient-to-r from-green-400 to-cyan-100 text-transparent bg-clip-text"
         >
           Achievements
         </motion.h2>
@@ -188,7 +188,7 @@ const AchievementsSection = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.3 }}
-              className="mb-4 text-xl md:text-2xl font-semibold text-white"
+              className="text-xl md:text-2xl font-semibold text-white mb-4"
             >
               Recognition & Awards
             </motion.h3>
@@ -212,7 +212,7 @@ const AchievementsSection = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.5 }}
-              className="mb-4 text-xl md:text-2xl font-semibold text-white"
+              className="text-xl md:text-2xl font-semibold text-white mb-4"
             >
               Extra curricular participation
             </motion.h3>

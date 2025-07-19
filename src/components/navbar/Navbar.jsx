@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import GlitchText from "./GlitchText";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
               className="font-bold text-2xl text-white hero glitch layers cursor-pointer"
               to="/"
             >
-              JAIKUMAR
+              <GlitchText className="" />
             </Link>
           </div>
 

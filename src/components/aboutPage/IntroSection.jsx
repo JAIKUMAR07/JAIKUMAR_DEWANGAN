@@ -22,8 +22,8 @@ const IntroSection = () => {
               I'm Jaikumar Dewangan, a passionate For engineering who loves
               problem-solving and continuous learning.
               <br />
-              I’ve built a strong foundation in C++ and web development, and
-              have developed several projects — some of which you’ll find in the
+              I've built a strong foundation in C++ and web development, and
+              have developed several projects — some of which you'll find in the
               Projects section.
               <br />
               Alongside building applications, I've solved 300+ DSA problems
@@ -44,10 +44,10 @@ const IntroSection = () => {
               opportunities where I can apply my skills, take on real-world
               challenges, and grow as a developer and an Engineer.
             </p>
-            <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
+            <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 items-center sm:items-start">
               <a href="https://docs.google.com/document/d/1SXx2gTZw1IOumGC1lb18513cEZAe9fohfjLTmvYqiZc/edit?usp=drivesdk">
-                <button class="bg-blue-950  lg:w-[140%]   text-yellow-500 border border-blue-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
-                  <span class="bg-blue-400 font-extrabold shadow-blue-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                <button className="bg-blue-950  w-[120%]  lg:w-[140%] text-yellow-500 border border-blue-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+                  <span className="bg-blue-400 font-extrabold shadow-blue-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
                   Resume
                 </button>
               </a>

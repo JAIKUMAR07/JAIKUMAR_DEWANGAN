@@ -21,9 +21,9 @@ const Aboutpage = () => {
               to real-world projects and am currently seeking opportunities to
               learn, grow, and contribute as a developer.
             </p>
-            <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
+            <div className="flex flex-col items-center sm:items-start space-y-4 sm:flex-row sm:space-y-0">
               <a href="https://docs.google.com/document/d/1SXx2gTZw1IOumGC1lb18513cEZAe9fohfjLTmvYqiZc/edit?usp=drivesdk">
-                <button className="bg-blue-950 lg:w-[140%] text-yellow-500 border border-blue-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+                <button className="bg-blue-950 w-[140%] text-yellow-500 border border-blue-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
                   <span className="bg-blue-400 shadow-blue-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
                   Resume
                 </button>
