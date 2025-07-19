@@ -1,4 +1,4 @@
-const skillImageBase = "../../../public/skills/otherSkills";
+const skillImageBase = "/skills/otherSkills";
 // Example of how OtherSkills.jsx should export the component for named import
 export const OtherSkills = [
   {
