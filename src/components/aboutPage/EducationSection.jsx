@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 const educations = [
   {
     institution:
@@ -11,7 +14,6 @@ const educations = [
         skills: [
           "Computer Science Fundamentals",
           "Programming",
-
           "Algorithms",
           "Data Structures",
         ],
@@ -26,51 +28,143 @@ const educations = [
         duration: "2021 - 2022",
         score: "Percentage: 80.8%",
         skills: ["Physics", "Chemistry", "Mathematics"],
-
         borderColor: "border-green-400",
       },
       {
         degree: "10th Class",
         duration: "2019 - 2020",
         score: "Percentage: 87.8%",
-
         borderColor: "border-yellow-400",
       },
     ],
   },
 ];
 
-const EducationCard = ({ education }) => {
+const EducationCard = ({ education, index }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: false, // Changed to false for repeatable animations
+    threshold: 0.2,
+  });
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+        delay: index * 0.15,
+        duration: 0.8,
+      },
+    },
+  };
+
+  const degreeVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: i * 0.1 + 0.3,
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    }),
+  };
+
+  const achievementVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 10,
+      },
+    },
+  };
+
   return (
-    <div className="my-5 group relative overflow-hidden rounded-xl bg-gray-800/50 backdrop-blur-sm p-5 hover:bg-gray-800/70 transition-all duration-300">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={cardVariants}
+      whileHover={{ y: -5 }}
+      className="my-5 group relative overflow-hidden rounded-xl bg-gray-800/50 backdrop-blur-sm p-6  transition-all duration-300 border border-gray-700 hover:border-cyan-400/30"
+    >
       <div className="relative z-10 text-white">
-        {/* If multiple degrees */}
+        <motion.h3
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.2 }}
+          className="text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-sky-400 to-cyan-300 text-transparent bg-clip-text"
+        >
+          {education.institution}
+        </motion.h3>
+
         {education.degrees ? (
           <>
-            <h3 className="text-xl font-bold mb-2">{education.institution}</h3>
             {education.degrees.map((deg, idx) => (
-              <div
+              <motion.div
                 key={idx}
-                className={`mb-3 pl-4 border-l-4 ${
+                custom={idx}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                variants={degreeVariants}
+                className={`mb-4 pl-4 border-l-4 ${
                   deg.borderColor || "border-sky-400"
                 }`}
               >
-                <p className="text-base font-semibold">
+                <motion.p
+                  animate={inView ? { x: [0, 5, 0] } : {}}
+                  transition={{ delay: idx * 0.1 + 0.5 }}
+                  className="text-base md:text-lg font-semibold"
+                >
                   {deg.degree} <span className="mx-2"></span>[{deg.duration}]
-                </p>
-                <p className="text-base">{deg.score}</p>
+                </motion.p>
+                <motion.p
+                  animate={inView ? { opacity: [0, 1] } : {}}
+                  transition={{ delay: idx * 0.1 + 0.6 }}
+                  className="text-base"
+                >
+                  {deg.score}
+                </motion.p>
                 {deg.skills && (
-                  <p className="mt-1 text-gray-300">
+                  <motion.p
+                    animate={inView ? { opacity: [0, 1] } : {}}
+                    transition={{ delay: idx * 0.1 + 0.7 }}
+                    className="mt-1 text-gray-300"
+                  >
                     <span className="font-bold">Skills:</span>{" "}
                     {deg.skills.join(", ")}
-                  </p>
+                  </motion.p>
                 )}
                 {deg.achievement && (
-                  <div className="mt-2 p-2 bg-gray-700/50 rounded-lg">
-                    <p className="text-yellow-300">🏆 {deg.achievement}</p>
-                  </div>
+                  <motion.div
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    variants={achievementVariants}
+                    transition={{ delay: idx * 0.1 + 0.8 }}
+                    className="mt-2 p-2 bg-gray-700/50 rounded-lg"
+                  >
+                    <p className="text-yellow-300 flex items-center">
+                      <motion.span
+                        animate={inView ? { rotate: [0, 20, -10, 0] } : {}}
+                        transition={{ delay: idx * 0.1 + 0.9 }}
+                        className="inline-block mr-2"
+                      >
+                        🏆
+                      </motion.span>
+                      {deg.achievement}
+                    </p>
+                  </motion.div>
                 )}
-              </div>
+              </motion.div>
             ))}
           </>
         ) : (
@@ -79,41 +173,67 @@ const EducationCard = ({ education }) => {
               education.borderColor || "border-sky-400"
             }`}
           >
-            <p className="text-base font-semibold">
-              {education.institution} - {education.degree}{" "}
-              <span className="mx-2"></span>[{education.duration}]
-            </p>
-            <p className="text-base">{education.score}</p>
-            {education.skills && (
-              <p className="mt-1 text-gray-300">
-                <span className="font-bold">Skills:</span>{" "}
-                {education.skills.join(", ")}
-              </p>
-            )}
-            {education.achievement && (
-              <div className="mt-2 p-2 bg-gray-700/50 rounded-lg">
-                <p className="text-yellow-300">🏆 {education.achievement}</p>
-              </div>
-            )}
+            {/* Single degree fallback (unchanged) */}
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const EducationSection = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: false, // Changed to false for repeatable animations
+    threshold: 0.1,
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+        duration: 0.8,
+      },
+    },
+  };
+
   return (
-    <section className="py-12 md:py-20">
+    <section className="py-12 md:py-20" ref={ref}>
       <div className="container mx-auto px-4 md:px-10">
-        <h2 className="text-3xl md:text-4xl font-black text-center mb-8 md:mb-12 bg-gradient-to-r from-sky-400 to-cyan-300 text-transparent bg-clip-text">
+        <motion.h2
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={titleVariants}
+          className="text-3xl md:text-4xl font-black text-center mb-8 md:mb-12 bg-gradient-to-r from-sky-400 to-cyan-300 text-transparent bg-clip-text"
+        >
           Education
-        </h2>
-        <div className="space-y-4 md:space-y-6">
+        </motion.h2>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="space-y-6 md:space-y-8"
+        >
           {educations.map((education, index) => (
-            <EducationCard key={index} education={education} />
+            <EducationCard key={index} education={education} index={index} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

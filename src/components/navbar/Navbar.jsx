@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="z-1  my bg-[#ffffff12] fixed top-0 w-full backdrop-blur-md cursor-pointer">
+    <nav className="z-1 my bg-[#ffffff12] fixed top-0 w-full backdrop-blur-md cursor-pointer">
       <div className="max-md:px-10 px-28">
         <div className="flex h-[80px] items-center justify-between">
           <div className="hero-container">
@@ -30,12 +30,20 @@ const Navbar = () => {
             <ul className="space-x-4 hidden lg:flex">
               {navigationItems.map((item) => (
                 <li key={item.path}>
-                  <Link
-                    className="px-6 text-[17px] font-[500] text-white border-[#fff] py-2 bg-[#f8f8f815] rounded-md hover:rounded-md hover:bg-[#f8f8f833] transition-all duration-300 cursor-pointer"
-                    to={item.path}
-                  >
-                    {item.label}
-                  </Link>
+                  <div className="bg-gradient-to-b from-gray-800/40 to-transparent p-[2px] rounded-[16px]">
+                    <Link
+                      to={item.path}
+                      className="group p-[2px] rounded-[12px] bg-gradient-to-b from-gray-700 to-gray-600 shadow-[0_2px_4px_rgba(0,0,0,0.7)] hover:shadow-[0_4px_8px_rgba(0,0,0,0.6)] hover:scale-105 active:shadow-[0_0px_1px_rgba(0,0,0,0.8)] active:scale-[0.995] transition-all duration-200 block"
+                    >
+                      <div className="bg-gradient-to-b from-gray-600 to-gray-700 rounded-[8px] px-3 py-2">
+                        <div className="flex gap-1 items-center">
+                          <span className="font-semibold text-white">
+                            {item.label}
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -74,15 +82,24 @@ const Navbar = () => {
         } transition-all`}
       >
         <div className="lg:hidden">
-          <div className="space-y-1 px-2 pb-3 pt-10">
+          <div className="space-y-6 px-2 pb-3 pt-10 flex flex-col items-center">
             {navigationItems.map((item) => (
-              <Link
+              <div
                 key={item.path}
-                className="block px-3 py-2 text-5xl sm:text-7xl border-b border-white text-end md:text-center font-bold cursor-pointer text-[#ffffff6f] hover:text-white"
-                to={item.path}
+                className="bg-gradient-to-b from-gray-800/40 to-transparent p-[3px] rounded-[16px] w-64"
               >
-                {item.label}
-              </Link>
+                <Link
+                  to={item.path}
+                  className="group p-[3px] rounded-[12px] bg-gradient-to-b from-gray-700 to-gray-600 shadow-[0_2px_4px_rgba(0,0,0,0.7)] hover:shadow-[0_4px_8px_rgba(0,0,0,0.6)] hover:scale-1 active:shadow-[0_0px_1px_rgba(0,0,0,0.8)] active:scale-[0.995] transition-all duration-200 block w-full"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <div className="bg-gradient-to-b from-gray-600 to-gray-700 rounded-[8px] px-4 py-3 text-center">
+                    <span className="font-semibold text-white text-2xl">
+                      {item.label}
+                    </span>
+                  </div>
+                </Link>
+              </div>
             ))}
           </div>
         </div>

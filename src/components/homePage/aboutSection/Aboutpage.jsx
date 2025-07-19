@@ -1,19 +1,16 @@
 import React from "react";
 import myprofile from "../../../../public/myprofile1.png";
+import Profile_card from "../../aboutPage/Profile_card";
 const Aboutpage = () => {
   return (
     <>
       <section>
         <div class="py-10 px-4 mx-auto max-h-screen max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16 ">
           <div className="py-10">
-            <img
-              src={myprofile}
-              className="scale-110   hidden md:block "
-              alt="image hai"
-            />
+            <Profile_card />
           </div>
           <div class="flex flex-col justify-center">
-            <h1 class="mb-4  font-extrabold tracking-tight leading-none text-gray-900  transform transition-transform duration-300 hover:scale-130 text-3xl lg:text-4xl dark:text-white">
+            <h1 class="mb-4  font-extrabold tracking-tight leading-none text-gray-900  transform transition-transform duration-300   text-3xl lg:text-4xl dark:text-white">
               3rd Year CSE Student
             </h1>
             <p class="mb-8  text-justify  font-normal text-gray-700 lg:text-xl dark:text-gray-400">
@@ -26,9 +23,10 @@ const Aboutpage = () => {
             </p>
             <div class="flex   flex-col space-y-4 sm:flex-row sm:space-y-0">
               <a href="https://docs.google.com/document/d/1SXx2gTZw1IOumGC1lb18513cEZAe9fohfjLTmvYqiZc/edit?usp=drivesdk">
-                <button className="px-8 py-4  mt-2 bg-primary text-center  items-center font-semibold rounded-lg border-none transition-all duration-300 ease-in-out transform active:scale-95 bg-amber-300 hover:shadow-lg hover:shadow-cyan-500 focus:outline-none hover:scale-110">
-                  <strong className="">RESUME</strong>
-                </button>{" "}
+                <button class="bg-blue-950  w-[140%] text-yellow-500 border border-blue-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+                  <span class="bg-blue-400 shadow-blue-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                  Resume
+                </button>
               </a>
             </div>
           </div>

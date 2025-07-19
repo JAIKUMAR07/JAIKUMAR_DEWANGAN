@@ -64,7 +64,7 @@ const Projects = () => {
         "A delivery optimization platform designed to enhance the productivity of delivery personnel. It provides real-time delivery routing and smart scanning features.",
       image: speeliable,
       type: "fullstack",
-      technologies: ["React.js", "Tailwind CSS", "FastAPI"],
+      technologies: ["React", "Tailwind CSS", "FastAPI"],
       features: [
         "Scan QR codes to fetch precise delivery locations.",
         "Optimize delivery routes to save time and distance.",
@@ -98,7 +98,7 @@ const Projects = () => {
   return (
     <div className="container mx-auto sm:w-[80%] px-4 py-12 pt-[100px]">
       <div className="mb-12 mt-10">
-        <h1 className="text-4xl text-center  font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-sky-400">
+        <h1 className="text-4xl text-center  font-black mb-8  bg-clip-text bg-gradient-to-r text-green-400 ">
           My Projects
         </h1>
         <div className="mt-2 flex flex-wrap gap-4">
@@ -173,7 +173,7 @@ const Projects = () => {
             </div>
 
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-white mb-3">
+              <h3 className="text-2xl font-bold text-yellow-400 mb-3">
                 {project.title}
               </h3>
               <p className="text-gray-300 mb-4">{project.description}</p>
@@ -195,7 +195,7 @@ const Projects = () => {
               </div>
 
               <div className="mb-6">
-                <h4 className="text-sm font-semibold text-cyan-400 mb-2">
+                <h4 className="text-sm font-semibold text-yellow-400 mb-2">
                   Key Features
                 </h4>
                 <ul className="space-y-2">
