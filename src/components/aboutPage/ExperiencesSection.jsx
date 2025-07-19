@@ -234,7 +234,7 @@ const ExperiencesSection = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={titleVariants}
-          className="text-3xl md:text-4xl font-black text-center mb-8 md:mb-12 bg-gradient-to-r from-sky-400 to-cyan-300 text-transparent bg-clip-text"
+          className="text-3xl md:text-4xl font-black text-center mb-8 md:mb-12 bg-gradient-to-r from-green-400 to-cyan-100 text-transparent bg-clip-text"
         >
           Experience
         </motion.h2>

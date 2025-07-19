@@ -123,7 +123,7 @@ const EducationCard = ({ education, index }) => {
                 <motion.p
                   animate={inView ? { x: [0, 5, 0] } : {}}
                   transition={{ delay: idx * 0.1 + 0.5 }}
-                  className="text-base md:text-lg font-semibold"
+                  className="text-base md:text-lg font-semibold text-yellow-200   "
                 >
                   {deg.degree} <span className="mx-2"></span>[{deg.duration}]
                 </motion.p>
@@ -219,7 +219,7 @@ const EducationSection = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={titleVariants}
-          className="text-3xl md:text-4xl font-black text-center mb-8 md:mb-12 bg-gradient-to-r from-sky-400 to-cyan-300 text-transparent bg-clip-text"
+          className="text-3xl md:text-4xl font-black text-center mb-8 md:mb-12 bg-gradient-to-r from-green-400 to-cyan-200 text-transparent bg-clip-text"
         >
           Education
         </motion.h2>

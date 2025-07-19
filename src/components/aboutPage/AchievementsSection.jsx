@@ -168,7 +168,7 @@ const AchievementsSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, type: "spring" }}
-          className="text-3xl md:text-4xl font-black text-center mb-8 md:mb-12 bg-gradient-to-r from-sky-400 to-cyan-300 text-transparent bg-clip-text"
+          className="text-3xl md:text-4xl font-black text-center mb-8 md:mb-12 bg-gradient-to-rfrom-green-400 to-cyan-100 text-transparent bg-clip-text"
         >
           Achievements
         </motion.h2>
