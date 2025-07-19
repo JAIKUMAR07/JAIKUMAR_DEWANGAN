@@ -128,7 +128,7 @@ const CertificateCard = ({ cert, index }) => {
             className="w-full h-full object-cover"
             src={cert.image}
             alt={cert.title}
-            initial={{ scale: 0.9, opacity: 0 }}
+            initial={{ scale: 0.9, opacity: 1 }}
             animate={inView ? { scale: 1, opacity: 1 } : {}}
             transition={{ delay: index * 0.2 + 0.5, duration: 0.6 }}
           />
@@ -139,7 +139,7 @@ const CertificateCard = ({ cert, index }) => {
           variants={contentVariants}
         >
           <motion.h2
-            className="text-xl font-bold text-white mb-2"
+            className="text-xl font-bold text-green-300 mb-2"
             animate={inView ? { x: [0, 5, -2, 0] } : {}}
             transition={{ delay: index * 0.2 + 0.7, duration: 0.6 }}
           >
@@ -157,7 +157,7 @@ const CertificateCard = ({ cert, index }) => {
               animate={inView ? { scale: [1, 1.5, 1] } : {}}
               transition={{ delay: index * 0.2 + 0.85, duration: 0.6 }}
             />
-            <motion.p className="text-cyan-100 font-medium">
+            <motion.p className="text-cyan-200 font-medium">
               {cert.issuer}
             </motion.p>
           </motion.div>
@@ -170,15 +170,6 @@ const CertificateCard = ({ cert, index }) => {
           >
             {cert.description}
           </motion.p>
-
-          <motion.div
-            className="absolute bottom-4 right-4 text-xs font-bold text-white bg-black/30 px-2 py-1 rounded-full"
-            initial={{ opacity: 0, x: 20 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: index * 0.2 + 1 }}
-          >
-            View Certificate
-          </motion.div>
         </motion.div>
       </motion.a>
     </motion.div>
