@@ -8,7 +8,7 @@ const BackendLaguage = [
   {
     id: 1,
     image: `${skillImageBase}/expressJS.png`,
-    title: "Express.JS hai",
+    title: "Express.js",
     level: "Beginner",
   },
   {
@@ -20,7 +20,7 @@ const BackendLaguage = [
   {
     id: 3,
     image: `${skillImageBase}/nodejs.png`,
-    title: "Node.JS",
+    title: "Node.js",
     level: "Beginner",
   },
   {
