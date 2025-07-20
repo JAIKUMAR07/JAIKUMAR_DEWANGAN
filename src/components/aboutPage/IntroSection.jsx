@@ -1,5 +1,6 @@
 import React from "react";
 import myprofile from "../../../public/myprofile1.png";
+import Profile_card from "./Profile_card";
 
 const IntroSection = () => {
   return (
@@ -8,11 +9,7 @@ const IntroSection = () => {
       <section className=" ">
         <div className="px-4 mx-auto w-full max-w-screen-xl grid lg:grid-cols-2 gap-4 lg:gap-16">
           <div className="flex justify-center items-center">
-            <img
-              src={myprofile}
-              className="scale-90 md:scale-110 max-h-[300px] md:max-h-none"
-              alt="profile image"
-            />
+            <Profile_card />
           </div>
           <div className="flex flex-col justify-center">
             <h1 className="my-3 md:mb-4 text-xl font-extrabold tracking-tight leading-none text-gray-900 md:text-2xl dark:text-white">
